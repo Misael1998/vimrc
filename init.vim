@@ -54,7 +54,7 @@ nnoremap <SPACE> <Nop>
 
 let mapleader = "\<Space>"
 
-" Simple tab navigation with <C-h> and <C-l> to intuitively go left and right
+" Navigation between tabs
 noremap <leader>h :tabp<CR>
 noremap <leader>l :tabn<CR>
 
@@ -70,7 +70,8 @@ endfunction
 nmap <leader>n :call ToggleNERDTree()<CR>
 nmap <C-n> :tabnew .<CR>
 
-
+" Format before save
+nmap <leader>f :Prettier<CR>
 
 
 
