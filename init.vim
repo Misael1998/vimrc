@@ -73,7 +73,8 @@ nmap <C-n> :tabnew .<CR>
 " Format before save
 nmap <leader>f :Prettier<CR>
 
-
+nmap <leader>q :q<CR>
+nmap <leader>wq :wq<CR>
 
 
 
