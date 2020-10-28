@@ -75,9 +75,12 @@ nmap <leader>f :Prettier<CR>
 
 nmap <leader>q :q<CR>
 nmap <leader>wq :wq<CR>
+nmap <leader>w :w<CR>
 
-
-
+" GIT
+nmap <leader>gpom :!git push origin master<CR>
+nmap <leader>gaa :!git add .<CR>
+nmap <leader>gs :!git status<CR>
 
 
 
