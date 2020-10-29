@@ -7,6 +7,7 @@ set expandtab
 set number relativenumber
 set t_Co=256
 set guicursor=
+set noshowmode
 
 set updatetime=50
 
@@ -16,8 +17,7 @@ highlight ColorColumn ctermbg=0 guibg=lightgrey
 call plug#begin("~/.vim/plugged")
 
 Plug 'wadackel/vim-dogrun'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'sheerun/vim-polyglot'
 
@@ -30,16 +30,17 @@ call plug#end()
 " Color theme
 colorscheme dogrun
 
-let g:airline_powerline_fonts = 1
-let g:airline_theme='bubblegum'
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#hunks#enabled=0
-let g:airline#extensions#branch#enabled=1
+let g:lightline = {
+      \'colorscheme':'dogrun',
+      \'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'FugitiveHead',
+      \ },
+      \}
 
-if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
-endif
-let g:airline_symbols.space = "\ua0"
 
 " Coc
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
