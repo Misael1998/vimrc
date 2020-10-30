@@ -8,6 +8,7 @@ set number relativenumber
 set t_Co=256
 set guicursor=
 set noshowmode
+set showtabline=2
 
 set updatetime=50
 
@@ -22,9 +23,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'sheerun/vim-polyglot'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-Plug 'preservim/nerdtree'
-
 call plug#end()
 
 " Color theme
@@ -54,17 +52,9 @@ let mapleader = "\<Space>"
 noremap <leader>h :tabp<CR>
 noremap <leader>l :tabn<CR>
 
-let NERDTreeShowHidden=1
-
-function! ToggleNERDTree()
-  NERDTreeToggle
-  " Set NERDTree instances to be mirrored
-  silent NERDTreeMirror
-endfunction
-
-" Bind "<leader>n" to toggle NERDTree
-nmap <leader>n :call ToggleNERDTree()<CR>
-nmap <C-n> :tabnew .<CR>
+nmap <leader>e:CocCommand explorer<CR>
+nmap <leader>nt :tabnew .<CR>
+nmap <leader>e :CocCommand explorer<CR>
 
 " Format before save
 nmap <leader>f :Prettier<CR>
@@ -73,6 +63,9 @@ nmap <leader>q :q<CR>
 nmap <leader>wq :wq<CR>
 nmap <leader>w :w<CR>
 nmap <leader>q1 :q!<CR>
+
+nmap <leader>sl <C-w>l
+nmap <leader>sh <C-w>h
 
 " GIT
 nmap <leader>gpom :!git push origin master<CR>
