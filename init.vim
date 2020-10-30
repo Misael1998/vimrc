@@ -22,12 +22,15 @@ Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'sheerun/vim-polyglot'
 
+Plug 'haishanh/night-owl.vim'
+
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 " Color theme
-colorscheme dogrun
+colorscheme night-owl
 
+"status line
 let g:lightline = {
       \'colorscheme':'dogrun',
       \'active': {
@@ -38,6 +41,18 @@ let g:lightline = {
       \   'gitbranch': 'FugitiveHead',
       \ },
       \}
+let g:lightline.separator = {
+	\   'left': '', 'right': ''
+  \}
+let g:lightline.subseparator = {
+	\   'left': '', 'right': '' 
+  \}
+let g:lightline.tabline = {
+  \   'left': [ ['tabs'] ],
+  \   'right': [ ['close'] ]
+  \ }
+set showtabline=2  " Show tabline
+set guioptions-=e  " Don't use GUI tabline
 
 
 " Coc
@@ -70,7 +85,7 @@ nmap <leader>sh <C-w>h
 " GIT
 nmap <leader>gpom :!git push origin master<CR>
 nmap <leader>gaa :!git add .<CR>
-nmap <leader>gs :!git status<CR>
+nmap <leader>gs :Gstatus<CR>
 
 
 
