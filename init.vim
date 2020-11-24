@@ -5,8 +5,6 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 set number relativenumber
-set t_Co=256
-set guicursor=
 set noshowmode
 set showtabline=2
 
@@ -32,31 +30,26 @@ colorscheme night-owl
 
 "status line
 let g:lightline = {
-      \'colorscheme':'dogrun',
-      \'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component_function': {
-      \   'gitbranch': 'FugitiveHead',
-      \ },
+      \'colorscheme':'dogrun'
       \}
+
 let g:lightline.separator = {
 	\   'left': '', 'right': ''
   \}
+
 let g:lightline.subseparator = {
 	\   'left': '', 'right': '' 
   \}
+
 let g:lightline.tabline = {
   \   'left': [ ['tabs'] ],
   \   'right': [ ['close'] ]
   \ }
-set showtabline=2  " Show tabline
-set guioptions-=e  " Don't use GUI tabline
 
 
 " Coc
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
+autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
 
 "Mappings
 nnoremap <SPACE> <Nop>
@@ -67,7 +60,6 @@ let mapleader = "\<Space>"
 noremap <leader>h :tabp<CR>
 noremap <leader>l :tabn<CR>
 
-nmap <leader>e:CocCommand explorer<CR>
 nmap <leader>nt :tabnew .<CR>
 nmap <leader>e :CocCommand explorer<CR>
 
@@ -86,6 +78,7 @@ nmap <leader>sh <C-w>h
 nmap <leader>gpom :!git push origin master<CR>
 nmap <leader>gaa :!git add .<CR>
 nmap <leader>gs :Gstatus<CR>
+nmap <leader>gc :Gcommit<CR>
 
 
 
