@@ -10,62 +10,39 @@ Plug 'sheerun/vim-polyglot'
 Plug 'haishanh/night-owl.vim'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+Plug 'dbeniamine/cheat.sh-vim'
 call plug#end()
 
 " Color theme
 colorscheme night-owl
 
-"status line
-let g:lightline = {
-      \'colorscheme':'dogrun'
-      \}
-
-let g:lightline.separator = {
-	\   'left': '', 'right': ''
-  \}
-
-let g:lightline.subseparator = {
-	\   'left': '', 'right': '' 
-  \}
-
-let g:lightline.tabline = {
-  \   'left': [ ['tabs'] ],
-  \   'right': [ ['close'] ]
-  \ }
-
-
-" Coc
-command! -nargs=0 Prettier :CocCommand prettier.formatFile
-autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
-
 "Mappings
-nnoremap <SPACE> <Nop>
-
-let mapleader = "\<Space>"
+let mapleader = " "
 
 " Navigation between tabs
-noremap <leader>h :tabp<CR>
-noremap <leader>l :tabn<CR>
+nnoremap <leader>h :tabn<CR>
+nnoremap <leader>l :tabp<CR>
 
-nmap <leader>nt :tabnew .<CR>
-nmap <leader>e :CocCommand explorer<CR>
+nnoremap <leader>nt :tabnew .<CR>
+nnoremap <leader>e :CocCommand explorer<CR>
 
 " Format before save
-nmap <leader>f :Prettier<CR>
+nnoremap <leader>f :Prettier<CR>
 
-nmap <leader>q :q<CR>
-nmap <leader>wq :wq<CR>
-nmap <leader>w :w<CR>
-nmap <leader>q1 :q!<CR>
+nnoremap <leader>q :q<CR>
+nnoremap <leader>wq :wq<CR>
+nnoremap <leader>w :w<CR>
+nnoremap <leader>q1 :q!<CR>
 
-nmap <leader>sl <C-w>l
-nmap <leader>sh <C-w>h
+nnoremap <leader>sl <C-w>l
+nnoremap <leader>sh <C-w>h
 
 " GIT
-nmap <leader>gpom :!git push origin master<CR>
-nmap <leader>gaa :!git add .<CR>
-nmap <leader>gs :Gstatus<CR>
-nmap <leader>gc :Gcommit<CR>
+nnoremap <leader>gpom :!git push origin master<CR>
+nnoremap <leader>gaa :!git add .<CR>
+nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gc :Gcommit<CR>
 
 
 
