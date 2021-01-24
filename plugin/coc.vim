@@ -1,8 +1,3 @@
-let g:lightline = {
-      \'colorscheme':'dogrun'
-      \}
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
 
-let g:lightline.tabline = {
-  \   'left': [ ['tabs'] ],
-  \   'right': [ ['close'] ]
-  \ }

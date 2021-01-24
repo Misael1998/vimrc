@@ -44,8 +44,9 @@ nnoremap <leader>gaa :!git add .<CR>
 nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gc :Gcommit<CR>
 
-
-
+" CC compiler
+nnoremap <leader>ccf :!cc %:t<CR>
+nnoremap <leader>eb :!./a.out<CR>
 
 
 
