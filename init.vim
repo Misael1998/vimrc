@@ -1,16 +1,14 @@
 set exrc
 
 call plug#begin("~/.vim/plugged")
-
 Plug 'wadackel/vim-dogrun'
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'sheerun/vim-polyglot'
-
+Plug 'lervag/vimtex'
+Plug 'donRaphaco/neotex', { 'for': 'tex' }
 Plug 'haishanh/night-owl.vim'
-
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
 Plug 'dbeniamine/cheat.sh-vim'
 call plug#end()
 
@@ -48,6 +46,8 @@ nnoremap <leader>gc :Gcommit<CR>
 nnoremap <leader>ccf :!cc %:t<CR>
 nnoremap <leader>eb :!./a.out<CR>
 
+" LaTex 
+nnoremap <leader>lt :!pdflatex %:t<CR>
 
 
 
