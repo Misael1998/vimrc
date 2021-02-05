@@ -47,7 +47,7 @@ nnoremap <leader>ccf :!cc %:t<CR>
 nnoremap <leader>eb :!./a.out<CR>
 
 " LaTex 
-nnoremap <leader>lt :!pdflatex %:t<CR>
+nnoremap <leader>lt :!pdflatex %:p<CR>
 
 
 
