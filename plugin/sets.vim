@@ -5,7 +5,8 @@ set shiftwidth=2
 set expandtab
 set number relativenumber
 set noshowmode
-set scrolloff=14
+set nowrap
+set scrolloff=11
 set showtabline=2
 set updatetime=50
 set colorcolumn=80

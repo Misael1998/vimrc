@@ -10,6 +10,9 @@ Plug 'donRaphaco/neotex', { 'for': 'tex' }
 Plug 'haishanh/night-owl.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dbeniamine/cheat.sh-vim'
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 call plug#end()
 
 " Color theme
@@ -19,8 +22,8 @@ colorscheme night-owl
 let mapleader = " "
 
 " Navigation between tabs
-nnoremap <leader>h :tabn<CR>
-nnoremap <leader>l :tabp<CR>
+nnoremap <leader>l :tabn<CR>
+nnoremap <leader>h :tabp<CR>
 
 nnoremap <leader>nt :tabnew .<CR>
 nnoremap <leader>e :CocCommand explorer<CR>
@@ -41,6 +44,7 @@ nnoremap <leader>gpom :!git push origin master<CR>
 nnoremap <leader>gaa :!git add .<CR>
 nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gc :Gcommit<CR>
+nnoremap <leader>gp :Gpush<CR>
 
 " CC compiler
 nnoremap <leader>ccf :!cc %:t<CR>
@@ -48,6 +52,16 @@ nnoremap <leader>eb :!./a.out<CR>
 
 " LaTex 
 nnoremap <leader>lt :!pdflatex %:p<CR>
+
+"Terminal
+nnoremap <leader>t :terminal<CR>
+tnoremap <Esc> <C-\><C-n>
+
+
+
+
+
+
 
 
 
