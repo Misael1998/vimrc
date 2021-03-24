@@ -13,6 +13,7 @@ Plug 'dbeniamine/cheat.sh-vim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'cjuniet/clang-format.vim'
 call plug#end()
 
 " Color theme
@@ -38,6 +39,8 @@ nnoremap <leader>q1 :q!<CR>
 
 nnoremap <leader>sl <C-w>l
 nnoremap <leader>sh <C-w>h
+nnoremap <leader>sj <C-w>j
+nnoremap <leader>sk <C-w>k
 
 " GIT
 nnoremap <leader>gpom :!git push origin master<CR>
