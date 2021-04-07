@@ -54,7 +54,7 @@ nnoremap <leader>ccf :!cc %:t<CR>
 nnoremap <leader>eb :!./a.out<CR>
 
 " LaTex 
-nnoremap <leader>lt :!pdflatex %:p<CR>
+nnoremap <leader>lt :NeoTex<CR>
 
 "Terminal
 nnoremap <leader>t :terminal<CR>
