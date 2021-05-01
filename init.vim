@@ -16,6 +16,9 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'cjuniet/clang-format.vim'
 call plug#end()
 
+"lua
+lua require("misa")
+
 " Color theme
 colorscheme night-owl
 
