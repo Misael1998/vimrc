@@ -1,8 +1,10 @@
 set exrc
 
 call plug#begin("~/.vim/plugged")
-Plug 'wadackel/vim-dogrun'
-Plug 'itchyny/lightline.vim'
+Plug 'hoob3rt/lualine.nvim'
+Plug 'akinsho/nvim-bufferline.lua'
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'ryanoasis/vim-devicons'
 Plug 'tpope/vim-fugitive'
 Plug 'sheerun/vim-polyglot'
 Plug 'lervag/vimtex'
@@ -14,10 +16,12 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'cjuniet/clang-format.vim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 call plug#end()
 
 "lua
-lua require("misa")
+lua require('misa')
+lua require'bufferline'.setup{}
 
 " Color theme
 colorscheme night-owl
@@ -28,6 +32,9 @@ let mapleader = " "
 " Navigation between tabs
 nnoremap <leader>l :tabn<CR>
 nnoremap <leader>h :tabp<CR>
+nnoremap <leader>L :BufferLineCycleNext<CR>
+nnoremap <leader>H :BufferLineCyclePrev<CR>
+nnoremap <leader>c :bd<CR>
 
 nnoremap <leader>nt :tabnew .<CR>
 nnoremap <leader>e :CocCommand explorer<CR>
@@ -46,7 +53,6 @@ nnoremap <leader>sj <C-w>j
 nnoremap <leader>sk <C-w>k
 
 " GIT
-nnoremap <leader>gpom :!git push origin master<CR>
 nnoremap <leader>gaa :!git add .<CR>
 nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gc :Gcommit<CR>
