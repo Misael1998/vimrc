@@ -54,9 +54,9 @@ nnoremap <leader>sk <C-w>k
 
 " GIT
 nnoremap <leader>gaa :!git add .<CR>
-nnoremap <leader>gs :Gstatus<CR>
-nnoremap <leader>gc :Gcommit<CR>
-nnoremap <leader>gp :Gpush<CR>
+nnoremap <leader>gs :Git<CR>
+nnoremap <leader>gc :Git commit<CR>
+nnoremap <leader>gp :Git push<CR>
 
 " CC compiler
 nnoremap <leader>ccf :!cc %:t<CR>
