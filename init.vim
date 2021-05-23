@@ -1,12 +1,8 @@
-set exrc
-
 call plug#begin("~/.vim/plugged")
 Plug 'hoob3rt/lualine.nvim'
-Plug 'akinsho/nvim-bufferline.lua'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tpope/vim-fugitive'
-Plug 'sheerun/vim-polyglot'
 Plug 'lervag/vimtex'
 Plug 'donRaphaco/neotex', { 'for': 'tex' }
 Plug 'haishanh/night-owl.vim'
@@ -17,11 +13,11 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'cjuniet/clang-format.vim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'joshdick/onedark.vim'
 call plug#end()
 
 "lua
 lua require('misa')
-lua require'bufferline'.setup{}
 
 " Color theme
 colorscheme night-owl
@@ -37,7 +33,6 @@ nnoremap <leader>H :BufferLineCyclePrev<CR>
 nnoremap <leader>c :bd<CR>
 
 nnoremap <leader>nt :tabnew .<CR>
-nnoremap <leader>e :CocCommand explorer<CR>
 
 " Format before save
 nnoremap <leader>f :Prettier<CR>

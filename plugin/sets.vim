@@ -7,11 +7,19 @@ set smartindent
 set number relativenumber
 set noshowmode
 set nowrap
-set scrolloff=11
-set showtabline=2
+set scrolloff=18
 set updatetime=50
 set colorcolumn=80
+set tabline=2
 set nohlsearch
 set signcolumn=yes
 set termguicolors
-set bg=dark
+
+hi! Normal ctermbg=NONE guibg=NONE
+hi! LineNr ctermbg=NONE guibg=NONE
+hi! Folded ctermbg=NONE guibg=NONE
+hi! NonText ctermbg=NONE guibg=NONE
+hi! SpecialKey ctermbg=NONE guibg=NONE
+hi! VerSplit ctermbg=NONE guibg=NONE
+hi! SignColumn ctermbg=NONE guibg=NONE
+hi! EndOfBuffer ctermbg=NONE guibg=NONE
