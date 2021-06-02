@@ -5,7 +5,6 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'tpope/vim-fugitive'
 Plug 'lervag/vimtex'
 Plug 'donRaphaco/neotex', { 'for': 'tex' }
-Plug 'haishanh/night-owl.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dbeniamine/cheat.sh-vim'
 Plug 'nvim-lua/popup.nvim'
@@ -13,6 +12,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'cjuniet/clang-format.vim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'ThePrimeagen/harpoon'
 Plug 'joshdick/onedark.vim'
 call plug#end()
 
@@ -20,7 +20,7 @@ call plug#end()
 lua require('misa')
 
 " Color theme
-colorscheme night-owl
+colorscheme onedark
 
 "Mappings
 let mapleader = " "
@@ -28,8 +28,6 @@ let mapleader = " "
 " Navigation between tabs
 nnoremap <leader>l :tabn<CR>
 nnoremap <leader>h :tabp<CR>
-nnoremap <leader>L :BufferLineCycleNext<CR>
-nnoremap <leader>H :BufferLineCyclePrev<CR>
 nnoremap <leader>c :bd<CR>
 
 nnoremap <leader>nt :tabnew .<CR>

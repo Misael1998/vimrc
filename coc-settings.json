@@ -5,10 +5,6 @@
     "css",
     "typescript"
   ],
-  "explorer.icon.enableNerdfont": true,
-  "explorer.previewAction.onHover": false,
-  "explorer.file.showHiddenFiles": true,
-  "explorer.width": 30,
   "languageserver": {
         "ccls": {
             "command": "ccls",
