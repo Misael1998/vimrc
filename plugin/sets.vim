@@ -15,4 +15,3 @@ set nohlsearch
 set signcolumn=yes
 set termguicolors
 
-hi! Normal ctermbg=NONE guibg=NONE

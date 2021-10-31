@@ -27,5 +27,7 @@
                 }
             }
         }
-    }
+    },
+    "python.jediEnabled": true,
+    "python.venvFolders": ["env","envs",".pyenv",".direnv"]
 }
