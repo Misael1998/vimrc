@@ -15,10 +15,11 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'ThePrimeagen/harpoon'
 Plug 'joshdick/onedark.vim'
 Plug 'sainnhe/gruvbox-material'
+Plug 'tmsvg/pear-tree'
 call plug#end()
 
 "lua
-lua require('misa')
+"lua require('misa')
 
 " Color theme
 colorscheme gruvbox-material
@@ -28,6 +29,7 @@ let mapleader = " "
 
 let g:gruvbox_material_background = 'soft'
 let g:gruvbox_material_transparent_background = 1
+
 " Navigation between tabs
 nnoremap <leader>l :tabn<CR>
 nnoremap <leader>h :tabp<CR>

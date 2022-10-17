@@ -29,5 +29,7 @@
         }
     },
     "python.jediEnabled": true,
-    "python.venvFolders": ["env","envs",".pyenv",".direnv"]
+    "python.venvFolders": ["env","envs",".pyenv",".direnv"],
+    "codeLens.enable": true,
+    "solargraph.useBundler": true
 }
